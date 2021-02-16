@@ -1,16 +1,6 @@
-function test() {
-  let num = 10;
-  return function() {
-    return num--;
-   
+function each(arr, callback) {
+  let result = [];
+  for(let elem of art){
+    result.push(callback())
   }
 }
-let func = test();
-let func1 = test();
-
-func();
-func();
-func1();
-func();
-console.log(func());
-
