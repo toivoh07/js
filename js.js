@@ -42,7 +42,7 @@
 
 // let arr = ['2,4,5,6,7,8,9', 'wt' , '', 'w', 'qwe'];
 // console.log(filter(arr,getEven));
-
+/*
 function every(arr,callback) {
  for (const elem of arr) {
    if (!callback(elem)) {
@@ -57,3 +57,20 @@ function isTrue(elem) {
 }
 let arr = [2,4,5,6,8,9];
 console.log(every(arr, isTrue));
+
+function some(arr, callback) {
+  for (const elem of arr) {
+    if (callback(elem)) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function isTrue(elem) {
+  return elem < 0;
+}
+let arr = [2, 4, 5, -6, 8, 9];
+console.log(some(arr, isTrue));
+*/
+
