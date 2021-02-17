@@ -42,3 +42,5 @@ function getEven(elem, i) {
 
 let arr = ['2,4,5,6,7,8,9', 'wt' , '', 'w', 'qwe'];
 console.log(filter(arr,getEven));
+
+////////////////////////jfjfjfnvvjvnvn,vmvmvmvvmfvjnv
