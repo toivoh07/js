@@ -44,17 +44,16 @@
 // console.log(filter(arr,getEven));
 
 function every(arr,callback) {
-  let flag = true;
  for (const elem of arr) {
    if (!callback(elem)) {
-     flag = false;
+     return false;
    }
  }
- return flag;
+ return true;
 }
 
 function isTrue(elem) {
   return elem > 0;
 }
-let arr = [2,,0,-17,4,5,6,8,9];
+let arr = [2,4,5,6,8,9];
 console.log(every(arr, isTrue));
