@@ -22,23 +22,39 @@
 // let arr = [2,4,5,6,7,8,9];
 // console.log(each(arr,getMultiplication));
 
-function filter(arr,callback) {
-  let result = [];
-    for (let i = 0; i < arr.length; i++) {
-      if(callback(arr[i], i)){
-        result.push(arr[i]);
-      }  
-    } 
-  return result;
+// function filter(arr,callback) {
+//   let result = [];
+//     for (let i = 0; i < arr.length; i++) {
+//       if(callback(arr[i], i)){
+//         result.push(arr[i]);
+//       }  
+//     } 
+//   return result;
+// }
+
+// function getEven(elem, i) {
+//   if(elem.length >= 1 && elem.length <= 3){
+//     return true;
+//   }else{
+//     return false;
+//   }
+// }
+
+// let arr = ['2,4,5,6,7,8,9', 'wt' , '', 'w', 'qwe'];
+// console.log(filter(arr,getEven));
+
+function every(arr,callback) {
+  let flag = true;
+ for (const elem of arr) {
+   if (!callback(elem)) {
+     flag = false;
+   }
+ }
+ return flag;
 }
 
-function getEven(elem, i) {
-  if(elem.length >= 1 && elem.length <= 3){
-    return true;
-  }else{
-    return false;
-  }
+function isTrue(elem) {
+  return elem > 0;
 }
-
-let arr = ['2,4,5,6,7,8,9', 'wt' , '', 'w', 'qwe'];
-console.log(filter(arr,getEven));
+let arr = [2,,0,-17,4,5,6,8,9];
+console.log(every(arr, isTrue));
