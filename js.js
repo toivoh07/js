@@ -74,3 +74,20 @@ let arr = [2, 4, 5, -6, 8, 9];
 console.log(some(arr, isTrue));
 */
 
+function  alternate(arr, callback1, callback2){
+  let result = [];
+  for (var i = 1; i < arr.length + 1; i++) {
+    if(i % 2 != 0){
+      result.push(callback1(arr[i]));
+    }else if(i % 2 == 0){
+      result.push(callback2(arr[i]));
+    }
+  }
+}
+function getEven(elem){
+  return elem + '?';
+}
+function getOdd(elem){
+  return elem + '!';
+}
+let arr = ['a','b','c','d','e'];
