@@ -42,6 +42,7 @@
 
 // let arr = ['2,4,5,6,7,8,9', 'wt' , '', 'w', 'qwe'];
 // console.log(filter(arr,getEven));
+<<<<<<< HEAD
 
 // function every(arr,callback) {
 //   let flag = true;
@@ -69,6 +70,16 @@ function alternate(arr, callback1, callback2) {
         }
      }
      return result;
+=======
+/*
+function every(arr,callback) {
+ for (const elem of arr) {
+   if (!callback(elem)) {
+     return false;
+   }
+ }
+ return true;
+>>>>>>> 5b6bde5ab9a8df8d0aaf3d8f4c21677d9aecc105
 }
 
 function even(elem) {
@@ -77,6 +88,28 @@ function even(elem) {
 function odd(elem) {
   return elem + '?';
 }
+<<<<<<< HEAD
 
 let arr = ['a', 'b', 'c', 'd', 'e'];
 console.log(alternate(arr, even, odd));
+=======
+let arr = [2,4,5,6,8,9];
+console.log(every(arr, isTrue));
+
+function some(arr, callback) {
+  for (const elem of arr) {
+    if (callback(elem)) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function isTrue(elem) {
+  return elem < 0;
+}
+let arr = [2, 4, 5, -6, 8, 9];
+console.log(some(arr, isTrue));
+*/
+
+>>>>>>> 5b6bde5ab9a8df8d0aaf3d8f4c21677d9aecc105
