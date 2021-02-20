@@ -1,5 +1,10 @@
 function func(prevPrevNum, prevNum){
-	// тут код с рекурсией, который вы должны написать
+    
+    prevPrevNum = prevNum;
+    prevNum = result;
+    func(prevPrevNum,prevNum);
+
+return result;  
 }
 
-func(1, 2); // вызываем функцию с первыми двумя числами
+ console.log(func(1, 2));
