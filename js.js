@@ -43,18 +43,40 @@
 // let arr = ['2,4,5,6,7,8,9', 'wt' , '', 'w', 'qwe'];
 // console.log(filter(arr,getEven));
 
-function every(arr,callback) {
-  let flag = true;
- for (const elem of arr) {
-   if (!callback(elem)) {
-     flag = false;
-   }
- }
- return flag;
+// function every(arr,callback) {
+//   let flag = true;
+//  for (const elem of arr) {
+//    if (!callback(elem)) {
+//      flag = false;
+//    }
+//  }
+//  return flag;
+// }
+
+// function isTrue(elem) {
+//   return elem > 0;
+// }
+// let arr = [2,,0,-17,4,5,6,8,9];
+// console.log(every(arr, isTrue));
+
+function alternate(arr, callback1, callback2) {
+   let result = [];
+     for (let i = 0; i < arr.length; i++) {
+        if(i%2 == 0){
+          result.push(callback1(arr[i]));
+        }else if(i%2 != 0){
+          result.push(callback2(arr[i]));
+        }
+     }
+     return result;
 }
 
-function isTrue(elem) {
-  return elem > 0;
+function even(elem) {
+  return elem + '!';
 }
-let arr = [2,,0,-17,4,5,6,8,9];
-console.log(every(arr, isTrue));
+function odd(elem) {
+  return elem + '?';
+}
+
+let arr = ['a', 'b', 'c', 'd', 'e'];
+console.log(alternate(arr, even, odd));
