@@ -33,16 +33,33 @@
 
 // console.log( func(['a', ['b', 'c', 'd'], ['e', 'f', ['g', ['j', 'k']]]] ));
 
-function func(arr) {
+// function func(arr) {
 
+//   for (let i = 0; i < arr.length; i++) {
+//      if(typeof arr[i] == 'object'){
+//          arr[i] = func(arr[i]);
+//      }else{
+//          arr[i] = arr[i] * arr[i];
+//      }
+//   }
+//   return arr;
+// }
+
+// console.log(func([1, [2, 7, 8], [3, 4], [5, [6, 7]]]));
+
+
+let result = [];
+ function func(arr) {
   for (let i = 0; i < arr.length; i++) {
      if(typeof arr[i] == 'object'){
          arr[i] = func(arr[i]);
      }else{
-         arr[i] = arr[i] * arr[i];
+        result.push(arr[i]);
      }
   }
-  return arr;
+  return result;
 }
+
+
 
 console.log(func([1, [2, 7, 8], [3, 4], [5, [6, 7]]]));
