@@ -1,3 +1,12 @@
-let arr = [12,43,-25,-2,1,-5,7];
+function getSum(...rest) {
+   let sum = 0;
+   let count = 0;
+   for (const elem of rest) {
+      sum += elem;
+      count++;
+   }
+   return sum / count ;
+}
 
-console.log(arr.filter(elem  =>  elem < 0).length);
+
+console.log(getSum(1,2,3,4,5,6,7));
